@@ -1,4 +1,6 @@
-# 204 Final Project - Vocabulary Builder
+# Vocabulary Builder
+
+This is a copy of the original repository with sensitive information (private keys, API endpoints) redacted. You can still visit the original web application [here](https://wustlcse204.github.io/10-final-project-sherryyork/).
 
 ## Overview
 
@@ -56,8 +58,8 @@ This is Google’s content delivery service which we use to extract pronunciatio
 
 ## Team
 
-| Name       | WUSTL ID |
-| ---------- | -------- |
-| York Liu   | yorkliu  |
-| Sherry Shi | shi.yu   |
+| Name        |
+| ----------  |
+| York Liu    |
+| Sherry Shi  |
 
