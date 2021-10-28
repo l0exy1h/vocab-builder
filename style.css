@@ -1,0 +1,396 @@
+/* global setup */
+/* ---------------------------------------------------- */
+:root
+{
+  --white1: #ffffff;
+  --white2: #fdfdfd;
+  --white3: #f9f9f9;
+  --gray1: #f3f3f3;
+  --gray2: #e7e7e7;
+  --gray3: #d6d6d6;
+  --gray4: #909090;
+  --gray5: #EDECED;
+  --gray6: #c0c0c0;
+  --black1: #222222;
+  --black2: #8e8e8e;
+  --blue1: #002f5e;
+  --blue2: #308dee;
+
+  --d-bg2: #21232d;
+  --d-bg3: #242630; 
+  --d-fg2: #e4e4e4;
+
+  --d-bg: #282a36;
+  --d-ln: #44475a;
+  --d-sel: #44475a;
+  --d-fg: #f8f8f2;
+  --d-comm: #6272a4;
+  --d-cyan: #8be9fd;
+  --d-green: #50fa7b;
+  --d-orange: #ffb86c;
+  --d-pink: #ff79c6;
+  --d-purple: #bd93f9;
+  --d-red: #ff5555;
+  --d-yellow: #f1fa8c;
+}
+@font-face 
+{
+  font-family: myfont;
+  src: url('assets/MPLUS1p-Medium.ttf');
+  font-weight: normal;
+}
+@font-face 
+{
+  font-family: myfont;
+  src: url('assets/MPLUS1p-Bold.ttf');
+  font-weight: bold;
+}
+body
+{
+  margin: 0px auto;
+  padding: 0px 0px;
+  padding-top: 50px;
+  width: 100%;
+  /* height: 100%; */
+  background-color: var(--d-bg) !important;
+  font-family: myfont, sans-serif;
+}
+
+/* top */
+/* ---------------------------------------------------- */
+#topdiv
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: var(--d-bg2) !important;
+}
+#topdiv-center
+{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--d-fg2);
+  font-size: 1.5em;
+}
+#top-title
+{
+  float: left;
+  height: 100%;
+}
+.top-button
+{
+  float: right;
+  height: 100%;
+  cursor: pointer;
+  transition: transform .2s;
+}
+.top-button:hover
+{
+  transform: scale(1.07);
+}
+#edit-button
+{
+  display: none;
+}
+
+/* welcome screen */
+/* ---------------------------------------------------- */
+#welcome
+{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  height: 20%;
+  width: 60%;
+  display: none;
+}
+#statsdiv
+{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: auto;
+  grid-gap: 6.6%;
+}
+.stat
+{
+  color: var(--d-fg);
+  text-align: center;
+  background-color: var(--d-bg2) ;
+  padding-bottom: 5%;
+  border: var(--d-bg) solid 1px;
+  border-radius: 15px;
+}
+.number
+{
+  font-size: 6rem;
+}
+.statname
+{
+  font-size: 1.5rem;
+}
+@media (max-width: 1480px)
+{
+  .number
+  {
+    font-size: 4rem;
+  }
+  .statname
+  {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 920px)
+{
+  .number
+  {
+    font-size: 1.5rem;
+  }
+  .statname
+  {
+    font-size: 0.7rem;
+  }
+  #flashcard-button
+  {
+    font-size: 1rem !important;
+  }
+  #flashcard-div
+  {
+    width: 80% !important;
+    left: 10% !important;
+  }
+  #fam-controller-center 
+  {
+    width: 90% !important;
+  }
+}
+#welcome-buttons
+{
+  margin-top: 5%;
+  text-align: center;
+  width: 90%;
+  color: var(--d-fg);
+  height: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#flashcard-button
+{
+  width: auto;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform .2s;
+}
+#flashcard-button:hover
+{
+  transform: scale(1.07);
+}
+
+/* Edit screen */
+/* ---------------------------------------------------- */
+#edit-div
+{
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  height: 20%;
+  width: 50%;
+  font-size: 1.2rem;
+  color: var(--d-fg);
+  display: none;
+}
+#edit-done
+{
+  width: 10rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform .2s;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background-color: var(--d-bg2);
+  border: var(--d-bg) solid 1px;
+  border-radius: 15px;
+  padding-left: 20px !important;
+  padding: 15px;
+}
+#edit-done:hover
+{
+  transform: scale(1.07);
+}
+#edit-link
+{
+  cursor: pointer;
+  font-style: italic;
+}
+#edit-link:hover
+{
+  text-decoration: underline;
+}
+
+/* Flashcard mode */
+/* ---------------------------------------------------- */
+#flashcard-div
+{
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  height: 50%;
+  width: 50%;
+  display: none;
+}
+#cardfront
+{
+  background-color: var(--d-bg2);
+  border: var(--d-bg) solid 1px;
+  border-radius: 15px;
+  padding-left: 20px !important;
+  padding: 15px;
+}
+#cardfront-metadata
+{
+  width: 100%;
+  height: 10%;
+  color: var(--d-comm);
+  font-size: 1.5rem;
+  overflow: auto;
+}
+#progress
+{
+  float: left;
+}
+#familiarity
+{
+  float: right;
+}
+#cardfront-word
+{
+  position: relative;
+  top: -15px;
+  color: var(--d-fg);
+  font-size: 3rem;
+  text-align: center
+}
+#cardfront-bottom
+{
+  /* height: 7%; */
+  overflow: auto
+}
+#cardfront-speak
+{
+  /* text-align: right; */
+  cursor: pointer;
+  /* font-size: 1.5rem; */
+  width: 20px;
+  height: 20px;
+  color: var(--d-comm);
+  float: right;
+}
+#cardfront-speak:hover
+{
+  /* text-decoration: underline */
+  transform: scale(1.07);
+}
+#cardback
+{
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--gray4);
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--d-bg3);
+  border: var(--d-bg) solid 1px;
+  border-radius: 15px;
+  padding: 15px;
+  z-index: -10;
+  transition: all 0.2s;
+}
+.cardback-in
+{
+  /* position: relative; */
+  /* top: -20%; */
+  transform: translateY(-20%);
+  opacity: 0%;
+}
+
+
+#flashcard-bottom
+{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  background-color: var(--d-bg2) !important;
+  display: none;
+}
+#fam-controller-center
+{
+  display: grid;
+  grid-template-columns: 16% 16% 16% 16% 16%;
+  grid-template-rows: auto;
+  grid-gap: 6%;
+  /* display: none; */
+}
+#def-controller-center
+{
+  display: grid;
+  grid-template-columns: 20%;
+  grid-template-rows: auto;
+  grid-gap: 0px;
+  justify-content: center;
+  display: none;
+}
+.flashcard-bottom-center
+{
+  width: 60%;
+  height: calc(100% - 20px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--d-fg2);
+  font-size: 1rem;
+}
+.key
+{
+  display: inline;
+  border-radius: 6px;
+  border: var(--gray4) solid 1px;
+  padding: 0px 3px 1px 3px;
+  margin: 0px 0px 0px 0px;
+  line-height: 1.8em;
+  background: var(--d-bg2);
+}
+.fam-button
+{
+  vertical-align: baseline;
+  text-align: center;
+  padding-top: 5%;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.fam-button:hover
+{
+  transform: scale(1.07);
+}
+.fam-button strong
+{
+  color: var(--d-comm)
+}
+#finish-button
+{
+  display: none
+}
+
+
+
+
+
+

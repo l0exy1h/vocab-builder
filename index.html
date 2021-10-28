@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="stylesheet" href="style.css">
+
+  <script src="auth.js"></script>
+  <title>Vocabulary Builder</title>
+</head>
+
+<body>
+
+  <div id='topdiv'>
+    <div id='topdiv-center'>
+      <div id='top-title'>Vocab Builder</div>
+      <div class='top-button' id='edit-button'>
+        Edit Word List
+      </div>
+      <div class='top-button' id='finish-button'>
+        Finish Early
+      </div>
+    </div>
+  </div>
+
+
+  <div id='welcome'>
+
+    <div id='statsdiv'>
+      <div class='stat' id='stat3'>
+        <div class='number'>
+          -3
+        </div>
+        <div class='statname'>
+          Familiar
+        </div>
+      </div>
+
+      <div class='stat' id='stat2'>
+        <div class='number'>
+          -2
+        </div>
+        <div class='statname'>
+          Meh
+        </div>
+      </div>
+
+      <div class='stat' id='stat1'>
+        <div class='number'>
+          -1
+        </div>
+        <div class='statname'>
+          Unfamiliar
+        </div>
+      </div>
+
+      <div class='stat' id='stat0'>
+        <div class='number'>
+          -0
+        </div>
+        <div class='statname'>
+          New
+        </div>
+      </div>
+
+    </div>
+
+    <div id='welcome-buttons'>
+      <div id='flashcard-button'>
+        Start memorizing
+      </div>
+      
+    </div>
+
+
+  </div>
+
+  <div id='edit-div'>
+    <div id='edit-info'>
+      You will be redirected to a Google Sheet shortly where you can modify the word list directly
+      <ul>
+        <li><strong>Add</strong>: Append a row. First column is the word; Second column is its meaning</li>
+        <li><strong>Remove</strong>: Simply remove a row</li>
+        <li><strong>Modify</strong>: Search for the word and modify its columns</li>
+        <li id='edit-link'>click here if you're not redirected</li>
+      </ul>
+    </div>
+    <div id='edit-done'>
+      Done Editing
+    </div>
+  </div>
+
+  <div id='flashcard-div'>
+    <div id='cardfront'>
+      <div id='cardfront-metadata'>
+        <div id='progress'>-1/-1</div>
+        <div id='familiarity'>Familiar</div>
+      </div>
+      <div id='cardfront-word'>key</div>
+      <div id='cardfront-bottom'>
+        <img src='assets/volume-up.svg' alt='say' id='cardfront-speak'>
+      </div>
+    </div>
+    <div id='cardback' class='cardback-in'>value</div>
+  </div>
+  <div id='flashcard-bottom'>
+    <div id='fam-controller-center' class='flashcard-bottom-center'>
+      <div class='fam-button' id='fam-preserve'>
+        <div>Keep as <strong>[]</strong></div>
+        <div>Press <div class='key'>space</div></div>
+      </div>
+      <div class='fam-button' id='fam-1'>
+        <div>Mark as <strong>unfamiliar</strong></div>
+        <div>Press <div class='key'>1</div></div>
+      </div>
+      <div class='fam-button' id='fam-2'>
+        <div>Mark as <strong>meh</strong></div>
+        <div>Press <div class='key'>2</div></div>
+      </div>
+      <div class='fam-button' id='fam-3'>
+        <div>Mark as <strong>familiar</strong></div>
+        <div>Press <div class='key'>3</div></div>
+      </div>
+      <div class='fam-button' id='fam-batch'>
+        <div>Remove from batch</div>
+        <div>Press <div class='key'>x</div></div>
+      </div>
+    </div>
+    <div id='def-controller-center' class='flashcard-bottom-center'>
+      <div class='fam-button' id='show-def-button'>
+        <div>Show definition</div>
+        <div>Press <div class='key'>space</div></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
